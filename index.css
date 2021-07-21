@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.whole{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.image-cointainer-grid{
+    height: 70%;
+    display: grid;
+    width: 30%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 34%;
+    border: 1px solid black;
+}
+#pic1{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+#pic2{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+#pic3{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+#pic4{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+#pic5{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+#pic6{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+
+}
+@media screen and (max-width:400px){
+    .image-cointainer-grid{
+        height: 70%;
+ 
+        width: 70%;
+       
+    }
+    
+}
