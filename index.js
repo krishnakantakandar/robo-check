@@ -75,9 +75,11 @@ grid6.style.backgroundImage=`url(${imageArr[5].path})`;
 let picIdStorage =[];
 
 resetButton.addEventListener('click',() =>{
+    resetButton.classList.add('hidden');
     shuffleImageArray(imagSuffle);
     suffle();
 
+   
     picIdStorage =[];
     document.getElementById('text').innerHTML = "select the 2same image";
     //console.log(picIdStorage.length);
@@ -90,10 +92,17 @@ resetButton.addEventListener('click',() =>{
 suffle();
 
 document.addEventListener("click", function(evt){
+
+    
+   if(evt.target.id != 'reset')
+     resetButton.classList.remove('hidden');
+     
    
 //console.log(document.getElementById(`${evt.target.id}`).style.backgroundImage) 
-if(evt.target.id != 'reset' && evt.target.id != 'text')
+if(evt.target.id != 'reset' && evt.target.id != 'text'){
+    
 picIdStorage.push(document.getElementById(`${evt.target.id}`).style.backgroundImage);
+}
 //console.log(picIdStorage.length);
 if(picIdStorage.length == 2)
 {
@@ -107,6 +116,7 @@ if(picIdStorage.length == 2)
 
 
   });
+  resetButton.classList.add('hidden');
 
 
   
